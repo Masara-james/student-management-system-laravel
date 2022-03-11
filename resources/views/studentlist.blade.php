@@ -11,9 +11,13 @@
     <title>STUDENT MANAGEMENT SYSTEM!</title>
   </head>
   <body>
+     <div class="image">
+          <img src="student.png"heigth="250px" width="600px" alt="">
+        </div>
     <div class="container">
       <div class="row">
       <section class="col-7">
+        
             <table class="table">
       
               <thead class="thread-light">
@@ -41,82 +45,83 @@
                       Edit
                     </button>
                    <a href="{{url('/show/'.$student->id)}}" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#myModal2">
-                      Showcd
+                      Show
                     </a>              
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal3">
                       Delete
                     </button>
                   </td>
-                </tr>
+                </tr>            
                 <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="postion:relative">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-         <span class="text-dark">
-        Are sure you want to  delete this {{$student->firstName}} {{$student->secondName}}?
-      </span>
-      </div>
-      <div class="modal-footer">
-       <a class=" btn btn-danger"  href="{{url('/delete/'.$student->id)}}">Yes</a>        
-       <a href="" class=" btn btn-primary" >No</a>        
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal3" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-success" style="postion:relative">
-       <h1 class="text-white">
-         STUDENT INFORMATION
-       </h1>
-      </div>
-      <div class="modal-body bg-info text-dark">
-         <div class="panel-body bio-graph-info">
-              <div class="row">
-                  <div class="container">
-                  <div class="bio-row">
-                      <p><span>First Name </span>: Smith</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Last Name </span>: Smith</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Country </span>: Australia</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Birthday</span>: 13 July 1983</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Occupation </span>: UI Designer</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Email </span>: jsmith@flatlab.com</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Mobile </span>: (12) 03 4567890</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Phone </span>: 88 (02) 123456</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-</div>
-      <div class="modal-footer">
-         <a href="" class="btn btn-danger">
-          Close
-         </a>             
-      </div>
-    </div>
-  </div>
-</div>
-                @endforeach
+               <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                   <div class="modal-header" style="postion:relative">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; right:10px; top:5px">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                   </div>
+                   <div class="modal-body">
+                      <span class="text-dark">
+                     Are sure you want to  delete this {{$student->firstName}} {{$student->secondName}}?
+                   </span>
+                   </div>
+                   <div class="modal-footer">
+                    <a class=" btn btn-danger"  href="{{url('/delete/'.$student->id)}}">Yes</a>        
+                    <a href="" class=" btn btn-primary" >No</a>        
+                   </div>
+                 </div>
+               </div>
+             </div>
+             @endforeach
+                  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal3" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header bg-success" style="postion:relative">
+                         <h1 class="text-white">
+                           STUDENT INFORMATION
+                         </h1>
+                        </div>
+                            <div class="modal-body bg-info text-dark">
+                               <div class="panel-body bio-graph-info">
+                                    <div class="row">
+                                        <div class="container">
+                                        <div class="bio-row">
+                                            <p><span>First Name </span>: Smith</p>
+                                        </div>
+                                        <div class="bio-row">
+                                            <p><span>Last Name </span>: Smith</p>
+                                        </div>
+                                        <div class="bio-row">
+                                            <p><span>Country </span>: Australia</p>
+                                        </div>
+                                        <div class="bio-row">
+                                            <p><span>Birthday</span>: 13 July 1983</p>
+                                        </div>
+                                        <div class="bio-row">
+                                            <p><span>Occupation </span>: UI Designer</p>
+                                                              </div>
+                                        <div class="bio-row">
+                                            <p><span>Email </span>: jsmith@flatlab.com</p>
+                                        </div>
+                                        <div class="bio-row">
+                                            <p><span>Mobile </span>: (12) 03 4567890</p>
+                                        </div>
+                                        <div class="bio-row">
+                                            <p><span>Phone </span>: 88 (02) 123456</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                   </div>
+                         <div class="modal-footer">
+                            <a href="" class="btn btn-danger">
+                             Close
+                            </a>             
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                
               </tbody>
             </table>  
           </section>
@@ -145,7 +150,7 @@
               </div>
                             
               <button type="submit" class="btn btn-primary" name="save">Submit</button>
-              <!--<button type="submit" class="btn btn-secondary">Reset</button>-->
+              <button type="submit" class="btn btn-secondary">Reset</button>
             </form>
          </section>
     </div>

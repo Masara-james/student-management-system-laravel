@@ -45,7 +45,7 @@ class StudentController extends Controller
     }
     public function delete($id){
         $student=Student::find($id);
-        //dd($student);
+        dd($student);
         $student->delete();
         return redirect()->back();
 
